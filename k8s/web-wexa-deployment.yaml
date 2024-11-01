@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-wexa-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-wexa
+  template:
+    metadata:
+      labels:
+        app: web-wexa
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "{{ .Date.Unix }}"
+    spec:
+      containers:
+        - name: web-wexa
+          image: pavankd12/web-wexa:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "500m"
+            limits:
+              memory: "512Mi"
+              cpu: "1"
