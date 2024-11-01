@@ -1,4 +1,4 @@
 {
-  "baseUrl": "http://api.wexa.thelollapalooza.in",
-  "wsBaseUrl": "ws://api.wexa.thelollapalooza.in"
+  "baseUrl": "http://api.connectify.thelollapalooza.in",
+  "wsBaseUrl": "ws://api.connectify.thelollapalooza.in"
 }
