@@ -57,8 +57,3 @@ jobs:
           # Apply the changes
           kubectl apply -f k8s/web-wexa-deployment.yaml
           kubectl apply -f k8s/web-wexa-service.yaml
-
-      - name: Force rollout restart
-        run: |
-          kubectl rollout restart deployment web-wexa-deployment
-          kubectl rollout status deployment web-wexa-deployment
